@@ -34,7 +34,7 @@ const issues=[
 {id:'LL-011',title:'Continue Khan Academy Kids activity review',owner:'Lead',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Continue documenting useful mechanics and adapting them as original activities.'},
 {id:'LL-012',title:'Redesign the reader as an open two-page book',owner:'Lead',status:'NEW',discovered:null,duration:null,evidence:'Requested: visible left and right pages, center fold, and convincing animated page turns.'},
 {id:'LL-013',title:'Create polished illustrated covers for library stories',owner:'Lead',status:'NEW',discovered:null,duration:null,evidence:'Requested: a beautiful book-cover presentation in the library.'},
-{id:'LL-014',title:'Build and publish this premium issue tracker',owner:'Lead',status:'WORK IN PROGRESS',discovered:'2026-11-04T22:39:00+09:00',duration:null,evidence:'Single-page dashboard with issue number, owner, status, discovery time, and time to fix.'}
+{id:'LL-014',title:'Build and publish this premium issue tracker',owner:'Lead',status:'CLOSED',discovered:'2026-11-04T22:39:00+09:00',duration:'3m 23s',evidence:'Published and verified on GitHub Pages. Future issue updates will be reflected here.'}
 ];
 const fmt=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Tokyo',dateStyle:'medium',timeStyle:'short'});
 function elapsed(start,end=Date.now()){if(!start)return 'Not recorded';let ms=Math.max(0,end-new Date(start).getTime()),m=Math.floor(ms/60000),d=Math.floor(m/1440);if(d)return `${d}d ${Math.floor(m%1440/60)}h`;let h=Math.floor(m/60);return h?`${h}h ${m%60}m`:`${m}m`}
