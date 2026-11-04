@@ -24,7 +24,7 @@ const issues=[
 {id:'LL-001',title:'Complete the end-to-end activity sweep',owner:'Lead',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'43 activities and 138 rounds pass local flows; visual and audio device review remains partial.'},
 {id:'LL-002',title:'Make each book quiz match its story',owner:'Book & Reading QA · Lead',status:'CLOSED',discovered:null,duration:null,evidence:'40 books have three story-specific questions; question and answer flow checks pass locally.'},
 {id:'LL-003',title:'Preserve full book artwork without stretching',owner:'Book & Reading QA',status:'CLOSED',discovered:null,duration:null,evidence:'All 160 page assets pass contain-fit checks; Oppo page samples show the full image.'},
-{id:'LL-004',title:'Keep coloring inside illustrated regions',owner:'Lead',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Region confinement and regression test are implemented; post-fix Oppo retest remains.'},
+{id:'LL-004',title:'Keep coloring inside illustrated regions',owner:'Lead',status:'CLOSED',discovered:null,duration:null,evidence:'Oppo v1.37.5 boundary swipe stayed within the starting petal region; black line art remains visible.'},
 {id:'LL-005',title:'Use natural, unmodified book voices',owner:'Audio & Voice QA',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Pitch and provenance checks pass locally; listening verification is deferred while muted.'},
 {id:'LL-006',title:'Keep background music below narration',owner:'Audio & Voice QA',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Mixer policy and local loudness checks pass; listening verification remains open.'},
 {id:'LL-007',title:'Give speech-bubble text comfortable padding',owner:'Lead',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Shared text insets were increased; remaining activity and device-size review is open.'},
@@ -34,7 +34,8 @@ const issues=[
 {id:'LL-011',title:'Continue Khan Academy Kids activity review',owner:'Lead',status:'WORK IN PROGRESS',discovered:null,duration:null,evidence:'Continue documenting useful mechanics and adapting them as original activities.'},
 {id:'LL-012',title:'Redesign the reader as an open two-page book',owner:'Lead',status:'NEW',discovered:null,duration:null,evidence:'Requested: visible left and right pages, center fold, and convincing animated page turns.'},
 {id:'LL-013',title:'Create polished illustrated covers for library stories',owner:'Lead',status:'NEW',discovered:null,duration:null,evidence:'Requested: a beautiful book-cover presentation in the library.'},
-{id:'LL-014',title:'Build and publish this premium issue tracker',owner:'Lead',status:'CLOSED',discovered:'2026-11-04T22:39:00+09:00',duration:'3m 23s',evidence:'Published and verified on GitHub Pages. Future issue updates will be reflected here.'}
+{id:'LL-014',title:'Build and publish this premium issue tracker',owner:'Lead',status:'CLOSED',discovered:'2026-11-04T22:39:00+09:00',duration:'3m 23s',evidence:'Published and verified on GitHub Pages. Future issue updates will be reflected here.'},
+{id:'LL-015',title:'Improve home recommendation card character scale and hierarchy',owner:'Lead',status:'NEW',discovered:'2026-11-04T22:46:00+09:00',duration:null,evidence:'Oppo v1.37.5 home screenshot shows Pip small within a wide, mostly empty feature card.'}
 ];
 const fmt=new Intl.DateTimeFormat('en-US',{timeZone:'Asia/Tokyo',dateStyle:'medium',timeStyle:'short'});
 function elapsed(start,end=Date.now()){if(!start)return 'Not recorded';let ms=Math.max(0,end-new Date(start).getTime()),m=Math.floor(ms/60000),d=Math.floor(m/1440);if(d)return `${d}d ${Math.floor(m%1440/60)}h`;let h=Math.floor(m/60);return h?`${h}h ${m%60}m`:`${m}m`}
